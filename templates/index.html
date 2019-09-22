@@ -21,13 +21,13 @@
                 {% if object.completed %}
                 <tr>
                     <td> <a href="{% url 'edit' object.id %}">{{ object.item }} </a></td>
-                    <td> <center><a href="{% url 'uncross' object.id %}">Completed</a> </center></td>
+                    <td> <center><a href="{% url 'uncross' object.id %}">Uncomplete</a> </center></td>
                     <td><center> <a href="{% url 'delete' object.id %}">Delete</a></center> </td>
                 </tr>
                 {% else %}
                 <tr></tr>
                     <td style="text-decoration: line-through"> <a href="{% url 'edit' object.id %}">{{ object.item }} </a></td>
-                    <td > <center><a href="{% url 'cross_off' object.id %}">Uncomplete</a> </center></td>
+                    <td > <center><a href="{% url 'cross_off' object.id %}">Completed</a> </center></td>
                     <td><center> <a href="{% url 'delete' object.id %}">Delete</a></center> </td>
                 </tr>   
                 {% endif %}
